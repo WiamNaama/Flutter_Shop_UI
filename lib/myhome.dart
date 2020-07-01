@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_shope/details.dart';
 
 class MyHome extends StatefulWidget {
   MyHome({Key key}) : super(key: key);
@@ -18,14 +19,15 @@ class _MyHomeState extends State<MyHome> {
           Stack(
             children: <Widget>[
               Image.asset(
-                'assets/images/2.jpg',
+                'assets/images/5.jpg',
                 fit: BoxFit.cover,
                 height: 400.0,
+                width: double.infinity,
               ),
               Center(
                 child: Column(children: <Widget>[
                   SizedBox(
-                    height: 15.0,
+                    height: 5.0,
                   ),
                   Text(
                     'WELCOME TO OUR COLLECTION',
@@ -36,21 +38,13 @@ class _MyHomeState extends State<MyHome> {
                         fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
-                    height: 15.0,
-                  ),
-                  Text(
-                    'FOR SUMMER',
-                    style: TextStyle(
-                        fontFamily: 'Quicksand',
-                        fontSize: 20.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w400),
-                  ),
-                  SizedBox(
-                    height: 250.0,
+                    height: 300.0,
                   ),
                   FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Details()));
+                    },
                     mini: true,
                     backgroundColor: Colors.white,
                     elevation: 0.0,
@@ -68,7 +62,7 @@ class _MyHomeState extends State<MyHome> {
           Stack(
             children: <Widget>[
               Image.asset(
-                'assets/images/4.jpg',
+                'assets/images/10.jpg',
                 fit: BoxFit.cover,
                 height: 400.0,
                 width: double.infinity,
